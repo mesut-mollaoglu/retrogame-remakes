@@ -1,4 +1,4 @@
-![](retrogame-remakes/Snake/ScreenShots/mainMenu.png)
+![](ScreenShots/mainMenu.png)
 ![alt text](https://github.com/mesut-mollaoglu/retrogame-remakes/new/main/Snake/ScreenShots/gamePlay1.png)
 ![alt text](https://github.com/mesut-mollaoglu/retrogame-remakes/new/main/Snake/ScreenShots/gamePlay2.png)
 ![alt text](https://github.com/mesut-mollaoglu/retrogame-remakes/new/main/Snake/ScreenShots/gamePlay3.png)
