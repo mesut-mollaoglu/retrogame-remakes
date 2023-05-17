@@ -18,11 +18,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
 }
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
-	AllocConsole();
-	freopen("conin$", "r", stdin);
-	freopen("conout$", "w", stdout);
-	freopen("conout$", "w", stderr);
-	printf("Debugging Window:\n");
 	WNDCLASSEX wc = { 0 };
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.lpfnWndProc = WindowProc;
@@ -33,7 +28,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	RegisterClassEx(&wc);
 	RECT rect = { 0, 0, 300, 600 };
 	AdjustWindowRectEx(&rect, WS_OVERLAPPEDWINDOW, false, WS_EX_OVERLAPPEDWINDOW);
-	windowHandle = CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"ClassName", L"Snake", WS_OVERLAPPEDWINDOW, 100, 0, rect.right - rect.left, rect.bottom - rect.top, nullptr, nullptr, hInstance, nullptr);
+	windowHandle = CreateWindowEx(WS_EX_OVERLAPPEDWINDOW, L"ClassName", L"Tetris", WS_OVERLAPPEDWINDOW, 100, 0, rect.right - rect.left, rect.bottom - rect.top, nullptr, nullptr, hInstance, nullptr);
 	SaveSystem::FileInit("Score.txt");
 	graphics = new Graphics();
 	controller = new GameController();
